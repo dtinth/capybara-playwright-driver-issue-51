@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<h1>click the go button</h1>
+<script>
+  function go (btn) {
+    btn.disabled = true
+    btn.innerText = 'please wait...'
+    setTimeout(() => {
+      window.location.href = 'working.html?wait=3'
+    }, 1000)
+  }
+</script>
+<button onclick="go(this)">go</button>

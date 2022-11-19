@@ -1,0 +1,12 @@
+working
+<script>
+  const wait = +new URLSearchParams(window.location.search).get('wait') || 3
+  document.write(`[${wait}]`)
+  setTimeout(() => {
+    if (wait > 1) {
+      window.location.href = '?wait=' + (wait - 1)
+    } else {
+      window.location.href = 'finish.html'
+    }
+  }, 1000)
+</script>
